@@ -1,0 +1,74 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "team",
+      "description",
+      "members"
+    ],
+    "properties": {
+      "team": {
+        "$id": "#/items/properties/team",
+        "type": "string",
+        "title": "The Team Schema",
+        "default": "",
+        "examples": [
+          "Broad-Rush-Columbia"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "description": {
+        "$id": "#/items/properties/description",
+        "type": "string",
+        "title": "The Description Schema",
+        "default": "",
+        "examples": [
+          "The Broad-Rush-Columbia team, led by Philip De Jager and David Bennett, focuses on taking a systems biology approach to mine a unique set of deep clinical, paraclinical, pathologic, genomic, epigenomic, transcriptomic, proteomic, metabolic and single cell brain and blood data from more than 1000 subjects from two prospective cohort studies of aging and dementia. They use these data to identify genes, proteins, and pathways with critical roles in a range of traits that influence the function of the aging brain, including susceptibility Alzheimer’s disease, the accumulation of aging-related neuropathologies, cognitive decline in older age, as well as resilience to the brain pathologies. Finally, the team then interrogates those genes in ex vivo and in vitro systems to determine their therapeutic potential."
+        ],
+        "pattern": "^(.*)$"
+      },
+      "members": {
+        "$id": "#/items/properties/members",
+        "type": "array",
+        "title": "The Members Schema",
+        "items": {
+          "$id": "#/items/properties/members/items",
+          "type": "object",
+          "title": "The Items Schema",
+          "required": [
+            "name",
+            "isprimaryinvestigator"
+          ],
+          "properties": {
+            "name": {
+              "$id": "#/items/properties/members/items/properties/name",
+              "type": "string",
+              "title": "The Name Schema",
+              "default": "",
+              "examples": [
+                "Chris Gaiteri"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "isprimaryinvestigator": {
+              "$id": "#/items/properties/members/items/properties/isprimaryinvestigator",
+              "type": "boolean",
+              "title": "The Isprimaryinvestigator Schema",
+              "default": false,
+              "examples": [
+                false
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
