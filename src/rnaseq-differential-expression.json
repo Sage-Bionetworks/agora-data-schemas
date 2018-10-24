@@ -1,0 +1,121 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "ensembl_gene_id",
+      "hgnc_symbol",
+      "logfc",
+      "fc",
+      "ci_l",
+      "ci_r",
+      "adj_p_val",
+      "tissue",
+      "study",
+      "model"
+    ],
+    "properties": {
+      "ensembl_gene_id": {
+        "$id": "#/items/properties/ensembl_gene_id",
+        "type": "string",
+        "title": "The Ensembl_gene_id Schema",
+        "default": "",
+        "examples": [
+          "ENSG00000085224"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "hgnc_symbol": {
+        "$id": "#/items/properties/hgnc_symbol",
+        "type": "string",
+        "title": "The Hgnc_symbol Schema",
+        "default": "",
+        "examples": [
+          "ATRX"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "logfc": {
+        "$id": "#/items/properties/logfc",
+        "type": "number",
+        "title": "The Logfc Schema",
+        "default": 0.0,
+        "examples": [
+          0.363
+        ]
+      },
+      "fc": {
+        "$id": "#/items/properties/fc",
+        "type": "number",
+        "title": "The Fc Schema",
+        "default": 0.0,
+        "examples": [
+          1.2861
+        ]
+      },
+      "ci_l": {
+        "$id": "#/items/properties/ci_l",
+        "type": "number",
+        "title": "The Ci_l Schema",
+        "default": 0.0,
+        "examples": [
+          0.2781
+        ]
+      },
+      "ci_r": {
+        "$id": "#/items/properties/ci_r",
+        "type": "number",
+        "title": "The Ci_r Schema",
+        "default": 0.0,
+        "examples": [
+          0.4483
+        ]
+      },
+      "adj_p_val": {
+        "$id": "#/items/properties/adj_p_val",
+        "type": "number",
+        "title": "The Adj_p_val Schema",
+        "default": 0.0,
+        "examples": [
+          9.5064e-12
+        ]
+      },
+      "tissue": {
+        "$id": "#/items/properties/tissue",
+        "type": "string",
+        "title": "The Tissue Schema",
+        "default": "",
+        "examples": [
+          "CBE"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "study": {
+        "$id": "#/items/properties/study",
+        "type": "string",
+        "title": "The Study Schema",
+        "default": "",
+        "examples": [
+          "MayoRNAseq"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "model": {
+        "$id": "#/items/properties/model",
+        "type": "string",
+        "title": "The Model Schema",
+        "default": "",
+        "examples": [
+          "AD Diagnosis (males and females)"
+        ],
+        "pattern": "^(.*)$"
+      }
+    }
+  }
+}
